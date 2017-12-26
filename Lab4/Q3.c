@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <string.h>
 
 int main() {
-	int x;
+	int status;
 	pid_t p;
 
-	x = 100;
 	p = fork();
 
 	//consider that fork function works correctly
@@ -14,17 +16,16 @@ int main() {
 		return -1;
 
 	else if(p == 0) {//child process
-		x++;
 		printf("child process number: %d\n", getpid());
-		printf("My x value: %d\n", x);
+		printf("Hello\n");
 	}
 	
 	else {//parent process
-		x--;
+		waitpid(p, &status, 0);
 		printf("I'm parent process %d\n", getpid());
-		printf("My x value: %d\n", x);
+		printf("goodbye\n");
 	}
-	printf("\nfinal x value: %d\n", x);
+	return 0;
 }
 
-//Q1 question answer: If parent and child try to change the value of x at the same time, it won't work correctly. Because their instructions work simultaneously, so one of result can be ignored or overwritten.
+//We can use the function waitpid, instead of wait. Waitpid function makes parent process waiting until the certain child end.
