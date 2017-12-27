@@ -1,0 +1,15 @@
+#dmesg Result
+
+
+[   16.769605] IPv6: ADDRCONF(NETDEV_UP): enp0s3: link is not ready
+[   16.773665] IPv6: ADDRCONF(NETDEV_UP): enp0s3: link is not ready
+[   16.776632] e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+[   16.780147] IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+[ 2400.932459] kernel_heath: loading out-of-tree module taints kernel.
+[ 2400.932459] kernel_heath: module verification failed: signature and/or required key missing - tainting kernel
+[ 2400.939399] Heath: Hello, Kernel! I'm Heath Kim, aka Kim Sang Hee!
+[ 2400.939399] Heath: Current linux version is Ubuntu 16.04!
+                And kernel version is 4.9.70!
+
+
+printk works correctly!

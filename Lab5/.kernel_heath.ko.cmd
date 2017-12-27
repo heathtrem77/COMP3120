@@ -1,0 +1,1 @@
+cmd_/home/heath/COMP3120/Lab5/kernel_heath.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/heath/COMP3120/Lab5/kernel_heath.ko /home/heath/COMP3120/Lab5/kernel_heath.o /home/heath/COMP3120/Lab5/kernel_heath.mod.o ;  true
