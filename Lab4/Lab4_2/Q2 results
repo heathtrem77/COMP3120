@@ -1,0 +1,101 @@
+-Unlock result-
+
+#If there is just one thread:
+
+~~~
+current count: 999993
+current count: 999994
+current count: 999995
+current count: 999996
+current count: 999997
+current count: 999998
+current count: 999999
+current count: 1000000
+Total working time: 6.548440
+return thread 0 29
+
+I set the upper limit 1000000, so the value of end is just 1000000. And the working time is 6.548 sec.
+
+
+#If there is two threads:
+
+~~~
+current count: 999993
+current count: 999994
+current count: 999995
+current count: 999996
+current count: 999997
+current count: 999998
+current count: 999999
+current count: 1000000
+Total working time: 7.059323
+current count: 999607
+Total working time: 7.059352
+return thread 0 29
+return thread 1 29
+
+
+One thread returned the count 1000000, but another one returned 999607. And the working time is over 7 sec, much more than single thread.
+
+
+~~~
+current count: 999993
+current count: 999994
+current count: 999995
+current count: 999996
+current count: 999997
+current count: 999998
+current count: 999999
+current count: 1000000
+Total working time: 7.273092
+return thread 0 29
+current count: 998535
+Total working time: 7.273154
+return thread 1 29
+
+
+second result is different of another one's count, 998535.
+
+
+
+
+-Locked result-
+
+
+1. In the thread_f function, there is no count=0; sentence
+
+~~~
+current count: 999993
+current count: 999994
+current count: 999995
+current count: 999996
+current count: 999997
+current count: 999998
+current count: 999999
+current count: 1000000
+Total working time: 6.173804
+Total working time: 0.000000
+return thread 0 0
+return thread 1 0
+
+
+If we add the locking material, while one thread is using the resource, the another can't use that resource. So in the upper result, only thread 0 work alone because of lock, and thread 1 can't even start working(because the ending limit of the function is count==1000000).
+
+
+2. If there is count=0; sentence
+
+~~~
+current count: 999993
+current count: 999994
+current count: 999995
+current count: 999996
+current count: 999997
+current count: 999998
+current count: 999999
+current count: 1000000
+Total working time: 6.087379
+return thread 0 0
+return thread 1 0
+
+
+I added count = 0; sentence behind "pthread_mutex_lock(&lock);", so each thread locked "count" and then initialize value to zero. So once thread 0 work end, then thread 1 initialized count's value to 0 and work again.
