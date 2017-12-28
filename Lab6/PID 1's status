@@ -1,4 +1,4 @@
-PID 1's status file, used by memory.c
+PID 1's status file, used by profiler.c
 
 
 Name:	systemd
