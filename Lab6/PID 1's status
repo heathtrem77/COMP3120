@@ -1,0 +1,55 @@
+PID 1's status file, used by memory.c
+
+
+Name:	systemd
+Umask:	0000
+State:	S (sleeping)
+Tgid:	1
+Ngid:	0
+Pid:	1
+PPid:	0
+TracerPid:	0
+Uid:	0	0	0	0
+Gid:	0	0	0	0
+FDSize:	128
+Groups:	 
+NStgid:	1
+NSpid:	1
+NSpgid:	1
+NSsid:	1
+VmPeak:	  185476 kB
+VmSize:	  119940 kB
+VmLck:	       0 kB
+VmPin:	       0 kB
+VmHWM:	    6044 kB
+VmRSS:	    6044 kB
+RssAnon:	    2048 kB
+RssFile:	    3996 kB
+RssShmem:	       0 kB
+VmData:	   18368 kB
+VmStk:	     132 kB
+VmExe:	    1392 kB
+VmLib:	    3672 kB
+VmPTE:	      96 kB
+VmPMD:	      16 kB
+VmSwap:	       0 kB
+HugetlbPages:	       0 kB
+Threads:	1
+SigQ:	0/6635
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	7be3c0fe28014a03
+SigIgn:	0000000000001000
+SigCgt:	00000001800004ec
+CapInh:	0000000000000000
+CapPrm:	0000003fffffffff
+CapEff:	0000003fffffffff
+CapBnd:	0000003fffffffff
+CapAmb:	0000000000000000
+Seccomp:	0
+Cpus_allowed:	1
+Cpus_allowed_list:	0
+Mems_allowed:	00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001
+Mems_allowed_list:	0
+voluntary_ctxt_switches:	1331
+nonvoluntary_ctxt_switches:	1677
