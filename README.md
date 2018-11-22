@@ -1,2 +1,1 @@
-#  COMP3120
-#  testing source
+lab6: 스레드를 사용하여 작업을 수행하는 과정을 실습함.
