@@ -1,2 +1,2 @@
 #  COMP3120
-lab3: Kernel module compile.
+lab3: 커널 모듈을 추가하고 컴파일하는 
